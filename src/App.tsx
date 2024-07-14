@@ -9,12 +9,14 @@ import Programs from "./components/Programs/Programs";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Title from "./components/Title/Title";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const App = () => {
     const [playState, setPlayState] = useState(false);
 
     return (
         <div>
+            <SpeedInsights />
             <Navbar />
             <Hero />
             <div className="container">
