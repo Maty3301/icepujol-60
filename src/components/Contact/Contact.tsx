@@ -49,7 +49,7 @@ const Contact = () => {
                 <ul>
                     <li>
                         <img src={mailIcon} alt="Mail Icon" />
-                        icepujol60@gmail.com
+                        icepuertomadryn@gmail.com
                     </li>
                     <li>
                         <img src={phoneIcon} alt="Phone Icon" />
