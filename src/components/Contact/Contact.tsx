@@ -11,7 +11,7 @@ const Contact = () => {
 
     const onSubmit = async (event: any) => {
         event.preventDefault();
-        setResult("Sending....");
+        setResult("Enviando....");
         const formData = new FormData(event.target);
 
         formData.append("access_key", import.meta.env.VITE_WEB3FORMS);
@@ -24,7 +24,7 @@ const Contact = () => {
         const data = await response.json();
 
         if (data.success) {
-            setResult("Form Submitted Successfully");
+            setResult("Formulario Enviado con Éxito");
             event.target.reset();
         } else {
             console.log("Error", data);
@@ -36,14 +36,15 @@ const Contact = () => {
         <div className="contact">
             <div className="contact-col">
                 <h3>
-                    Send us a Message
+                    Envíanos un Mensaje
                     <img src={messageIcon} alt="Message Icon" />
                 </h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                    saepe natus ullam vel aliquam quidem placeat, laboriosam
-                    dolor! Officia dignissimos soluta hic quasi dolore iure
-                    consequatur quisquam. Accusamus.
+                    No dude en ponerse en contacto con nosotros a través del
+                    formulario o información de contacto. Sus comentarios,
+                    preguntas y sugerencias son importantes para nosotros, ya
+                    que nos esforzamos por un servicio excepcional a nuestra
+                    comunidad universitaria.
                 </p>
                 <ul>
                     <li>
@@ -52,7 +53,7 @@ const Contact = () => {
                     </li>
                     <li>
                         <img src={phoneIcon} alt="Phone Icon" />
-                        +54 280-402 7825
+                        +54 280-4027825
                     </li>
                     <li>
                         <img src={locationIcon} alt="Location Icon" />
@@ -62,29 +63,29 @@ const Contact = () => {
             </div>
             <div className="contact-col">
                 <form onSubmit={onSubmit}>
-                    <label>Your name</label>
+                    <label>Su Nombre</label>
                     <input
                         type="text"
-                        name="name"
-                        placeholder="Enter Your Name"
+                        name="nombre"
+                        placeholder="Escriba su Nombre"
                         required
                     />
-                    <label>Phone Number</label>
+                    <label>Número de Teléfono</label>
                     <input
                         type="tel"
-                        name="phone"
-                        placeholder="Enter Your Mobile Number"
+                        name="telefono"
+                        placeholder="Escriba su Número de Móvil"
                         required
                     />
-                    <label>Write Your Messages Here</label>
+                    <label>Escriba aquí sus mensajes</label>
                     <textarea
-                        name="message"
+                        name="mensaje"
                         rows={6}
-                        placeholder="Enter Your Message"
+                        placeholder="Escriba su Mensaje"
                         required
                     ></textarea>
                     <button type="submit" className="btn dark-btn">
-                        Submit Now <img src={whiteArrow} alt="White Arrow" />
+                        Enviar Ahora <img src={whiteArrow} alt="White Arrow" />
                     </button>
                 </form>
                 <span>{result}</span>

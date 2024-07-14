@@ -5,14 +5,15 @@ const Hero = () => {
     return (
         <div className="hero container">
             <div className="hero-text">
-                <h1>We Ensure better education for a better world</h1>
+                <h1>Garantizamos una educación mejor para un mundo mejor</h1>
                 <p>
-                    Our cutting-edge curriculum is designed to empower students
-                    with the knowledge, skills, and experiences needed to excel
-                    in the dynamic field of education
+                    Nuestro plan de estudios de vanguardia está diseñado para
+                    capacitar a los estudiantes con los conocimientos,
+                    habilidades y experiencias necesarias para sobresalir en el
+                    dinámico campo de la educación
                 </p>
                 <button className="btn">
-                    Explore More <img src={darkArrow} alt="darkArrow" />
+                    Explorar Más <img src={darkArrow} alt="darkArrow" />
                 </button>
             </div>
         </div>

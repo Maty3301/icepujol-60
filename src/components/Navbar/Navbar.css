@@ -24,8 +24,7 @@ nav ul li {
 }
 
 nav ul li p:hover {
-    border-bottom: 1px solid white;
-    transition: .1s;
+    text-decoration-line: underline;
 }
 
 .dark-nav {

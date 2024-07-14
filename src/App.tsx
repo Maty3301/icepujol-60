@@ -10,7 +10,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Title from "./components/Title/Title";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
-const app = () => {
+const App = () => {
     const [playState, setPlayState] = useState(false);
 
     return (
@@ -18,20 +18,20 @@ const app = () => {
             <Navbar />
             <Hero />
             <div className="container">
-                <Title subtitle="Our Programs" title="What We Offer" />
+                <Title subtitle="Actividades" title="Que Ofrecemos" />
                 <Programs />
                 <About setPlayState={setPlayState} />
-                <Title subtitle="Gallery" title="Campus Photos" />
+                <Title subtitle="Galería" title="Fotos de Actividades" />
                 <Campus />
-                <Title subtitle="Testimonials" title="What Student Says" />
+                <Title subtitle="Testimonios" title="Que Decimos Nosotros" />
                 <Testimonials />
-                <Title subtitle="Contact Us" title="Get in Touch" />
+                <Title subtitle="Contáctanos" title="Póngase en Contacto" />
                 <Contact />
-                <Footer />
             </div>
+            <Footer />
             <VideoPlayer playState={playState} setPlayState={setPlayState} />
         </div>
     );
 };
 
-export default app;
+export default App;

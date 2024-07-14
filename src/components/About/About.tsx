@@ -17,7 +17,7 @@ const About = ({ setPlayState }: any) => {
                 />
             </div>
             <div className="about-right">
-                <h3>ABOUT UNIVERCITY</h3>
+                <h3>IGLESIA CRISTIANA EVANGÉLICA</h3>
                 <h2>Nurturing Tomorrow's Leaders Today</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

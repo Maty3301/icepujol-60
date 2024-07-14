@@ -20,7 +20,7 @@ const Navbar = () => {
 
     return (
         <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-            <img src={logo} alt="logo" className="logo" />
+            <h1 className="logo">ICE-PM</h1>
             <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
                 <li>
                     <Link to="hero" smooth={true} offset={0} duration={500}>
@@ -66,7 +66,7 @@ const Navbar = () => {
                     <Link
                         to="contact"
                         smooth={true}
-                        offset={0}
+                        offset={-260}
                         duration={500}
                         className="btn"
                     >
