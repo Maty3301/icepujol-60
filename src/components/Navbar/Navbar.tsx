@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import menuIcon from "../../assets/menu-icon.png";
+import logo from "../../assets/logo.svg";
 import { useEffect, useState } from "preact/hooks";
 import { Link } from "react-scroll";
 
@@ -19,21 +20,11 @@ const Navbar = () => {
 
     return (
         <nav className={`container ${sticky ? "dark-nav" : ""}`}>
-            <h1 className="logo">ICE-PM</h1>
+            <img src={logo} alt="Logo" className="logo" />
             <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
                 <li>
                     <Link to="hero" smooth={true} offset={0} duration={500}>
                         <p>Inicio</p>
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to="program"
-                        smooth={true}
-                        offset={-260}
-                        duration={500}
-                    >
-                        <p>Actividades</p>
                     </Link>
                 </li>
                 <li>
@@ -43,22 +34,12 @@ const Navbar = () => {
                 </li>
                 <li>
                     <Link
-                        to="campus"
+                        to="horarios"
                         smooth={true}
-                        offset={-260}
+                        offset={-210}
                         duration={500}
                     >
-                        <p>Conferencias</p>
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to="testimonials"
-                        smooth={true}
-                        offset={-260}
-                        duration={500}
-                    >
-                        <p>Testimonios</p>
+                        <p>Actividades</p>
                     </Link>
                 </li>
                 <li>

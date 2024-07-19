@@ -1,37 +1,35 @@
 import "./About.css";
-import aboutImg from "../../assets/about.png";
-import playIcon from "../../assets/play-icon.png";
+import aboutImg from "../../assets/about.jpg";
 
-const About = ({ setPlayState }: any) => {
+const About = () => {
     return (
         <div className="about">
             <div className="about-left">
                 <img src={aboutImg} alt="About" className="about-img" />
-                <img
-                    src={playIcon}
-                    alt="Play Icon"
-                    className="play-icon"
-                    onClick={() => {
-                        setPlayState(true);
-                    }}
-                />
             </div>
             <div className="about-right">
-                <h3>IGLESIA CRISTIANA EVANGÉLICA</h3>
-                <h2>Nurturing Tomorrow's Leaders Today</h2>
+                <h3>SOBRE NOSOTROS</h3>
+                <h2>Iglesia Cristiana Evangélica</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cupiditate architecto dolorum, magni corporis aperiam
-                    repellat dolor dolore eveniet repudiandae. Nobis!
+                    Esta Iglesia es la continuidad del testimonio instaurado por
+                    los pioneros que habitaron estas tierras a principios del
+                    siglo pasado. Hoy en día somos una congregación
+                    intergeneracional de hijos de Dios, que aman a Jesucristo y
+                    a los demás.
                 </p>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Ullam consequatur iusto laboriosam animi minima rerum porro!
+                    Somos salvos por gracia mediante la obra de Jesús en la
+                    cruz. Queremos compartir con cuantos quieran, a que puedan
+                    creer en el Señor Jesucristo y ser salvos por la eternidad.
+                    'Cree en el Señor Jesucristo y serás salvo, tú y tu casa.'
+                    Hechos 16:31.
                 </p>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Fugit magni minima pariatur qui cum tempora repellat totam,
-                    voluptate quaerat in repellendus neque expedita placeat?
+                    Puede consultar nuestros horarios y ver los días en que nos
+                    reunimos para celebrar la bondad de Dios en nosotros,
+                    aprender de La Palabra de Dios juntos y también animarnos
+                    unos a otros, a medida que tratamos de extender el amor de
+                    Dios a nuestra comunidad y sus alrededores.
                 </p>
             </div>
         </div>

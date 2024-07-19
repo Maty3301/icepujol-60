@@ -8,11 +8,11 @@
 
 .contact-col {
     flex-basis: 48%;
-    color: #676767;
+    color: #525252;
 }
 
 .contact-col h3 {
-    color: #000f38;
+    color: #002047;
     font-weight: 500;
     font-size: 25px;
     display: flex;
@@ -36,6 +36,10 @@
     margin: 20px 0;
 }
 
+.contact-col ul li a:hover {
+    text-decoration-line: underline;
+}
+
 .contact-col ul li img {
     width: 25px;
     margin-right: 10px;
@@ -57,6 +61,15 @@
 .contact-col span {
     display: block;
     margin: 20px 0;
+}
+
+.recaptcha {
+    margin-bottom: 15px;
+}
+
+.error-captcha {
+    color: red;
+    margin-bottom: 28px;
 }
 
 /* Media Query */

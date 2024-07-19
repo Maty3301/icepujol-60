@@ -1,21 +1,29 @@
 import "./Hero.css";
-// import darkArrow from "../../assets/dark-arrow.png";
+import darkArrow from "../../assets/dark-arrow.png";
+import { Link } from "react-scroll";
 
 const Hero = () => {
-  return (
-    <div className="hero container">
-      <div className="hero-text">
-        <h1>BAJO CONSTRUCCIÓN</h1>
-        <p>
-          Nuestro sitio web está en construcción, ¡pero estamos listos para
-          comenzar! Estamos preparando algo increíble y emocionante para ti
-        </p>
-        {/* <button className="btn">
-                    Explorar Más <img src={darkArrow} alt="darkArrow" />
-                </button> */}
-      </div>
-    </div>
-  );
+    return (
+        <div className="hero container">
+            <div className="hero-text">
+                <h1>¡Jesús es la respuesta a tu necesidad!</h1>
+                <p>
+                    Te esperamos en una de nuestras reuniones del fin de
+                    semana. Un tiempo para adorar juntos y oír la Palabra de
+                    Dios.
+                </p>
+                <Link
+                    to="horarios"
+                    smooth={true}
+                    offset={-210}
+                    duration={500}
+                    className="btn"
+                >
+                    Ver Horarios <img src={darkArrow} alt="darkArrow" />
+                </Link>
+            </div>
+        </div>
+    );
 };
 
 export default Hero;

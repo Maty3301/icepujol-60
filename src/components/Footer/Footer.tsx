@@ -1,38 +1,49 @@
-import { CiFacebook, CiInstagram, CiYoutube } from "react-icons/ci";
 import "./Footer.css";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
+    const icon_size = 25;
+
     return (
-        <div className="footer container">
-            <ul className="footer-col1">
-                <li>Política de privacidad | Condiciones de uso</li>
-                <li>© 2024 ICE-PM. Todos los derechos reservados.</li>
-            </ul>
-            <div>
-                <ul className="footer-col2">
-                    <li>
-                        <a href="#">Localidades</a>
-                    </li>
-                    <li>
-                        <a href="#">Donar</a>
-                    </li>
-                    <li>
-                        <a href="#">Herramientas</a>
-                    </li>
-                </ul>
+        <footer>
+            <div className="footer-content">
+                <h3>ICE-PM</h3>
+                <p>
+                    Somos una Iglesia centrada en Jesucristo y su
+                    Palabra. Llevamos a nuestros miembros a expresar el objetivo
+                    bíblico de vivir para Dios y para los demás.
+                </p>
                 <ul className="socials">
-                    <a href="#">
-                        <CiFacebook size={30} />
-                    </a>
-                    <a href="#">
-                        <CiInstagram size={30} />
-                    </a>
-                    <a href="#">
-                        <CiYoutube size={30} />
-                    </a>
+                    <li>
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61562249855014"
+                            target="_blank"
+                        >
+                            <FaFacebook size={icon_size} />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/icepm_ok/"
+                            target="_blank"
+                        >
+                            <FaInstagram size={icon_size} />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.youtube.com/@icepm_ok"
+                            target="_blank"
+                        >
+                            <FaYoutube size={icon_size} />
+                        </a>
+                    </li>
                 </ul>
             </div>
-        </div>
+            <div className="footer-bottom">
+                <p>ICE-PM &copy; 2024. Puerto Madryn, Argentina.</p>
+            </div>
+        </footer>
     );
 };
 
