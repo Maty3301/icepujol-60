@@ -67,7 +67,7 @@ const Contact = () => {
                     <li>
                         <img src={locationIcon} alt="Location Icon" />
                         <a
-                            href="https://maps.app.goo.gl/7H69yXspqr566NaH6"
+                            href="https://maps.app.goo.gl/FPFBwp9jTRPLLM7KA"
                             target="_blank"
                         >
                             Pujol 60, Puerto Madryn
