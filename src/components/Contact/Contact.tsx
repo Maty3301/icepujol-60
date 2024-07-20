@@ -10,7 +10,7 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 const Contact = () => {
     const [result, setResult] = useState("");
     const [token, setToken] = useState<any>(null);
-    const captcha = useRef<any>(null);
+    const captcha = useRef<HCaptcha>(null);
 
     const onSubmit = async (event: any) => {
         event.preventDefault();
@@ -32,8 +32,8 @@ const Contact = () => {
             if (data.success) {
                 setResult("Formulario Enviado con Éxito");
                 event.target.reset();
-                captcha.current.reset();
-                setToken("");
+                captcha.current?.resetCaptcha();
+                setToken(null);
             } else {
                 console.log("Error", data);
                 setResult(data.message);
