@@ -4,12 +4,13 @@ import mailIcon from "../../assets/mail-icon.png";
 import phoneIcon from "../../assets/phone-icon.png";
 import locationIcon from "../../assets/location-icon.png";
 import whiteArrow from "../../assets/white-arrow.png";
-import { useState } from "preact/compat";
+import { useRef, useState } from "preact/compat";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const Contact = () => {
     const [result, setResult] = useState("");
     const [token, setToken] = useState<any>(null);
+    const captcha = useRef<any>(null);
 
     const onSubmit = async (event: any) => {
         event.preventDefault();
@@ -31,15 +32,13 @@ const Contact = () => {
             if (data.success) {
                 setResult("Formulario Enviado con Éxito");
                 event.target.reset();
+                captcha.current.reset();
+                setToken("");
             } else {
                 console.log("Error", data);
                 setResult(data.message);
             }
         } else setToken(false);
-    };
-
-    const onHCaptchaChange = (token: any) => {
-        setToken(token);
     };
 
     return (
@@ -102,8 +101,10 @@ const Contact = () => {
                     <div className="recaptcha">
                         <HCaptcha
                             sitekey={import.meta.env.VITE_CAPTCHA_WEBSITE}
-                            onVerify={onHCaptchaChange}
+                            onVerify={(token) => setToken(token)}
+                            onExpire={() => setToken(null)}
                             reCaptchaCompat={false}
+                            ref={captcha}
                         />
                     </div>
                     {token === false && (
