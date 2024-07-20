@@ -4,13 +4,12 @@ import mailIcon from "../../assets/mail-icon.png";
 import phoneIcon from "../../assets/phone-icon.png";
 import locationIcon from "../../assets/location-icon.png";
 import whiteArrow from "../../assets/white-arrow.png";
-import React, { useEffect, useRef, useState } from "preact/compat";
+import { useState } from "preact/compat";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const Contact = () => {
-    const [result, setResult] = React.useState("");
+    const [result, setResult] = useState("");
     const [token, setToken] = useState<any>(null);
-    const captcha = useRef<any>(null);
 
     const onSubmit = async (event: any) => {
         event.preventDefault();
@@ -20,6 +19,7 @@ const Contact = () => {
             const formData = new FormData(event.target);
 
             formData.append("access_key", import.meta.env.VITE_WEB3FORMS);
+            formData.append("h-captcha-response", token);
 
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
@@ -35,13 +35,12 @@ const Contact = () => {
                 console.log("Error", data);
                 setResult(data.message);
             }
-            setToken(true);
         } else setToken(false);
     };
 
-    useEffect(() => {
-        if (token) setToken(true);
-    }, [token]);
+    const onHCaptchaChange = (token: any) => {
+        setToken(token);
+    };
 
     return (
         <div className="contact">
@@ -103,8 +102,8 @@ const Contact = () => {
                     <div className="recaptcha">
                         <HCaptcha
                             sitekey={import.meta.env.VITE_CAPTCHA_WEBSITE}
-                            onVerify={setToken}
-                            ref={captcha}
+                            onVerify={onHCaptchaChange}
+                            reCaptchaCompat={false}
                         />
                     </div>
                     {token === false && (
