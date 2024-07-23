@@ -100,7 +100,7 @@ const Contact = () => {
                     ></textarea>
                     <div className="recaptcha">
                         <HCaptcha
-                            sitekey={import.meta.env.VITE_CAPTCHA_WEBSITE}
+                            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" // free sitekey para web3forms
                             onVerify={(token) => setToken(token)}
                             onExpire={() => setToken(null)}
                             reCaptchaCompat={false}
