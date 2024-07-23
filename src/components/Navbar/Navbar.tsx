@@ -48,10 +48,17 @@ const Navbar = () => {
                         smooth={true}
                         offset={-260}
                         duration={500}
+                    >
+                        <p>Contáctanos</p>
+                    </Link>
+                </li>
+                <li>
+                    <a
+                        href="https://donaronline.org/ice-puerto-madryn/donacion-iglesia-cristiana-evangelica"
                         className="btn"
                     >
-                        Contáctanos
-                    </Link>
+                        Donativo
+                    </a>
                 </li>
             </ul>
             <img
