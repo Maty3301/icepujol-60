@@ -1,5 +1,5 @@
 import "./Footer.css";
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaSpotify, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     const icon_size = 25;
@@ -9,9 +9,9 @@ const Footer = () => {
             <div className="footer-content">
                 <h3>ICE-PM</h3>
                 <p>
-                    Somos una Iglesia centrada en Jesucristo y su
-                    Palabra. Llevamos a nuestros miembros a expresar el objetivo
-                    bíblico de vivir para Dios y para los demás.
+                    Somos una Iglesia centrada en Jesucristo y su Palabra.
+                    Llevamos a nuestros miembros a expresar el objetivo bíblico
+                    de vivir para Dios y para los demás.
                 </p>
                 <ul className="socials">
                     <li>
@@ -36,6 +36,14 @@ const Footer = () => {
                             target="_blank"
                         >
                             <FaYoutube size={icon_size} />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://open.spotify.com/show/0JW3aJOV5cHZtfEcaxyTFd"
+                            target="_blank"
+                        >
+                            <FaSpotify size={icon_size} />
                         </a>
                     </li>
                 </ul>

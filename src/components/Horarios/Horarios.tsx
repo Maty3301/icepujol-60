@@ -9,7 +9,7 @@ import {
     styled,
     tableCellClasses,
 } from "@mui/material";
-import "./Horarios.css"
+import "./Horarios.css";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -30,7 +30,70 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     },
 }));
 
-const Horarios = ({ schedule }: any) => {
+const Horarios = () => {
+    const horarios = [
+        {
+            hora: "09:30",
+            domingo: "Santa Cena",
+            lunes: "-",
+            martes: "-",
+            miercoles: "-",
+            jueves: "-",
+            viernes: "-",
+            sabado: "-",
+        },
+        {
+            hora: "11:00",
+            domingo: "Escuela Dominical",
+            lunes: "-",
+            martes: "-",
+            miercoles: "-",
+            jueves: "-",
+            viernes: "-",
+            sabado: "-",
+        },
+        {
+            hora: "15:30",
+            domingo: "-",
+            lunes: "Reunión Femenina",
+            martes: "-",
+            miercoles: "-",
+            jueves: "-",
+            viernes: "-",
+            sabado: "-",
+        },
+        {
+            hora: "17:00",
+            domingo: "-",
+            lunes: "-",
+            martes: "-",
+            miercoles: "-",
+            jueves: "-",
+            viernes: "-",
+            sabado: "Reunión de Adolescentes",
+        },
+        {
+            hora: "19:00",
+            domingo: "Reunión de Prédica",
+            lunes: "-",
+            martes: "-",
+            miercoles: "-",
+            jueves: "-",
+            viernes: "-",
+            sabado: "-",
+        },
+        {
+            hora: "20:00",
+            domingo: "-",
+            lunes: "-",
+            martes: "Reunión de Oración",
+            miercoles: "-",
+            jueves: "Estudio Bíblico",
+            viernes: "-",
+            sabado: "Reunión de Jóvenes",
+        },
+    ];
+
     return (
         <div className="horarios">
             <TableContainer component={Paper}>
@@ -64,7 +127,7 @@ const Horarios = ({ schedule }: any) => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {schedule.map((row: any, index: any) => (
+                        {horarios.map((row: any, index: any) => (
                             <StyledTableRow key={index}>
                                 <StyledTableCell align="center">
                                     {row.hora}
